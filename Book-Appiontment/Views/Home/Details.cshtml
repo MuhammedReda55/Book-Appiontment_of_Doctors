@@ -1,0 +1,53 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Example</title>
+    <!-- Bootstrap 4 CSS -->
+    
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1> <a href="/Home/Hospital"><i class="bi bi-arrow-return-left"></i></a>  Complete Appointment with @Model.Name</h1>
+        <div class="card mb-3 col-12">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="~/images/@Model.Img" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <form action="/Doctors/list">
+                            <input type="hidden" name="dotorname" value="@Model.Name"/>
+                            <label for="patient">Patient Name</label><br />
+                            <input id="patient" type="text" style="width:800px" name="PatientName" required/> <br />
+
+                            <label for="date">Appointment Date</label><br />
+                            <input id="date" type="date" style="width:800px" name="AppiontmenDate" required /><br />
+
+                            <label for="time">Appointment Time</label><br />
+                            <input id="time" type="time" style="width:800px" name="AppiontmenTime" required />
+                            <!-- Button to trigger modal -->
+                            <br />
+                            <br />
+                            <button type="submit" class="btn btn-primary" style="width:300px">
+                                Complete Appointment
+                            </button>
+                        </form>
+                        <br />
+                        <div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+﻿<div class="row">
+   <h1>
+        <a href="/Home/Index"><i class="bi bi-arrow-return-left"></i></a>
+   </h1> 
+    @foreach (var item in Model)
+    {
+        <div class="col-4">
+            <div class="card" style="height: 100%">
+                <div style="height:100%">
+                    <img src="~/images/@item.Img" class="card-img-top" height="100%" alt="...">
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-9">
+                            <h5 class="card-title">@item.Name</h5>
+                        </div>
+
+
+                    </div>
+
+                    Specialization: @item.Specialization
+                    <br /><br />
+                    <a href="https://localhost:7047/Home/Details/?DoctorId=@item.Id" class="btn btn-primary">Book Appiontment</a>
+
+
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+
+
+
+
+
+
+
+
+
+
+

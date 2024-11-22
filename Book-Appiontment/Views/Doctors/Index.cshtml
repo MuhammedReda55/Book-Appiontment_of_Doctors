@@ -1,0 +1,36 @@
+﻿﻿<div class="row mb-2">
+    <div class="col-9">
+        <h1> <a href="/Home/Hospital"><i class="bi bi-arrow-return-left"></i></a> All Completed Appiontment</h1>
+    </div>
+    </div>
+
+<div class="row">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+               <th scope="col">Doctor Name</th> 
+                <th scope="col">Patient Name</th> 
+                 <th scope="col">Appiontmen Date</th> 
+                <th scope="col">Appiontmen Time</th> 
+            </tr>
+        </thead>
+        <tbody>
+            @for (int i = 0; i < Model.Count; i++)
+            {
+                <tr class="table-light">
+                    <th scope="row">@(i + 1)</th>
+                    <th scope="row">@Model[i].NameDoctor</th>
+                    <th scope="row">@Model[i].NamePatient</th>
+                    <th scope="row">@Model[i].AppiontmenDate</th>
+                    <th scope="row">@Model[i].AppiontmenTime</th>
+                </tr>
+            }
+                
+           
+
+        </tbody>
+    </table>
+
+    </div>
+    
